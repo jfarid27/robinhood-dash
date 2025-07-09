@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "tsc next.config.ts --outDir ./ && mv ./next.config.js ./next.config.mjs",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
