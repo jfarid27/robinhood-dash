@@ -29,16 +29,16 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "deno install"
+        run: "npm install"
 
       - name: Build step
-        run: "deno task build"
+        run: "npm run build && (cp -r public .next/standalone/public; cp -r .next/static .next/standalone/.next/static; mv .next/standalone/server.js .next/standalone/server.cjs)"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "jalilf-robinhood-d-29"
-          entrypoint: "jsr:@deno/nextjs-start"
-          root: "."
+          project: "jalilf-robinhood-d-94"
+          entrypoint: "./server.cjs"
+          root: ".next/standalone"
           
           
