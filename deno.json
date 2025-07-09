@@ -1,0 +1,18 @@
+{
+  "deploy": {
+    "project": "912b5cb4-c9bd-4ffe-9a40-e3543fd84cae",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [
+      ".next",
+      "public"
+    ],
+    "entrypoint": "jsr:@deno/nextjs-start/v15"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-explicit-any", "require-await"]
+    }
+  }
+}
